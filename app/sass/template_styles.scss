@@ -1,0 +1,23 @@
+@import "core/vars";
+@import "core/mixins";
+@import "core/normalize";
+@import "core/fonts";
+
+@import "core/base";
+@import "core/header";
+@import "core/footer";
+@import "core/buttons";
+
+@import "plugins/slick";
+@import "plugins/ion.rangeSlider";
+
+@import "blocks/page";
+@import "blocks/catalog";
+@import "blocks/price-slider";
+@import "blocks/big-banner";
+@import "blocks/catalog-detail";
+@import "blocks/basket";
+@import "blocks/quantity-selection";
+
+@import "pages/index";
+@import "pages/page404";

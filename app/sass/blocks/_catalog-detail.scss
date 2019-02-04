@@ -1,0 +1,110 @@
+.catalog-detail{
+  @media screen and (min-width: $w-tablet) {
+    display: flex;
+  }
+  &__slider{
+    margin-bottom: 20px;
+    @media screen and (min-width: $w-tablet) {
+      width: 330px;
+    }
+  }
+  &__text{
+    font-size: 12px;
+    font-family: $f-roboto;
+    font-weight: $light;
+    font-style: italic;
+    margin-bottom: 27px;
+    @media screen and (min-width: $w-tablet) {
+      font-size: 16px;
+      max-width: 500px;
+    }
+  }
+  &__btm{
+    @media screen and (min-width: $w-tablet) {
+      display: flex;
+      //justify-content: space-between;
+      align-items: center;
+      max-width: 300px;
+    }
+  }
+  &__pc{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    @media screen and (min-width: $w-tablet) {
+      margin-bottom: 0;
+      display: block;
+      margin-right: 10px;
+    }
+  }
+  &__price{
+    font-size: 20px;
+    color: $c-green;
+    font-family: $f-bebas;
+    @media screen and (min-width: $w-tablet) {
+      font-size: 24px;
+    }
+  }
+  &__l{
+    @media screen and (min-width: $w-tablet) {
+      flex: 0 0 auto;
+      margin-right: 40px;
+    }
+  }
+  &__r{}
+  &__btn{
+    text-align: center;
+  }
+  &__buy{
+    width: 30px;
+    height: 30px;
+    @include bg-img(contain);
+    background-image: url('images/busket.svg');
+  }
+}
+.catalog-detail-slider{
+  &__item{
+    width: 246px;
+    max-width: 100%;
+    @media screen and (min-width: $w-tablet) {
+      width: 330px;
+    }
+  }
+  &__img{
+    display: block;
+    width: 230px;
+    height: 230px;
+    @include bg-img(cover);
+    @media screen and (min-width: $w-tablet) {
+      width: 330px;
+      height: 330px;
+    }
+  }
+  .slick-dots{
+    display: flex;
+    justify-content: center;
+    line-height: 0;
+    font-size: 0;
+    @include uldev();
+    padding: 10px 0 0;
+    li{
+      width: 5px;
+      height: 5px;
+      background-color: $c-green;
+      border-radius: 50%;
+      display: block;
+      margin: 0 5px;
+      border: 1px solid $c-green;
+      cursor: pointer;
+      transition: .5s;
+      @media screen and (min-width: $w-tablet) {
+        width: 10px;
+        height: 10px;
+      }
+      &.slick-active{
+        background-color: transparent;
+      }
+    }
+  }
+}

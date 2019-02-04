@@ -1,0 +1,89 @@
+html,
+body {
+  height: 100%;
+  background-color: $c-bg;
+}
+.loaded{
+  position: relative;
+  .wrapper{
+    visibility: hidden;
+    opacity: 0;
+  }
+  &:after{
+    content: '';
+    position: fixed;
+    left: 50%;
+    right: 0;
+    top: 30%;
+    margin-left: -100px;
+    width: 200px;
+    height: 200px;
+    background-image: url('images/logo.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    @include pulse();
+  }
+}
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  color: $white;
+  font-size: 12px;
+  line-height: 1.25;
+  background-color: $c-bg;
+  overflow-x: hidden;
+  @media screen and (min-width: $w-desktop) {
+    font-size: 14px;
+  }
+}
+.workarea{
+}
+.content {
+  flex: 1 0 auto;
+}
+a{
+  text-decoration: underline;
+  text-underline-position: under;
+  color: $c-green;
+  transition: .5s;
+  &:hover{
+    text-decoration: none;
+  }
+}
+button:focus,
+input:focus,
+textarea:focus{
+  outline: none;
+}
+textarea{
+  resize: vertical;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=submit]{
+  cursor: pointer;
+}
+button{
+  border: none;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+.container{
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 0 20px;
+  @media screen and (min-width: $w-desktop) {
+    max-width: $w-desktop;
+  }
+}
+.rub{
+  font-family: $f-rub;
+}

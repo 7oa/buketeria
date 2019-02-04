@@ -1,0 +1,36 @@
+.quantity-selection{
+  display: flex;
+  align-items: center;
+  &__plus,
+  &__minus{
+    width: 14px;
+    height: 14px;
+    line-height: 14px;
+    color: $c-green;
+    border-radius: 50%;
+    border: 1px solid $white;
+    text-align: center;
+    cursor: pointer;
+    transition: .5s;
+    &.disabled{
+      opacity: .2;
+    }
+  }
+  &__plus{
+    line-height: 14px;
+  }
+  &__minus{
+    line-height: 12px;
+  }
+  &__cur{
+    font-size: 20px;
+    color: $c-green;
+    font-family: $f-bebas;
+    width: 45px;
+    text-align: center;
+    //padding: 0 10px;
+    box-sizing: border-box;
+    border: none;
+    background-color: transparent;
+  }
+}

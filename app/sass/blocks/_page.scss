@@ -1,0 +1,75 @@
+.page{
+  padding-bottom: 50px;
+  @media screen and (min-width: $w-desktop) {
+    //padding-bottom: 100px;
+  }
+}
+.page-ttl{
+  margin-bottom: 20px;
+}
+.page-h{
+  font-size: 30px;
+  font-family: $f-bebas;
+  margin-bottom: 5px;
+  @media screen and (min-width: $w-desktop) {
+    font-size: 60px;
+    margin-bottom: 0;
+  }
+  h1{
+    margin: 0;
+    padding: 0;
+    font-size: inherit;
+    font-weight: inherit;
+  }
+}
+.page-prev{
+  font-size: 12px;
+  font-family: $f-roboto;
+  font-weight: $light;
+  font-style: italic;
+  @media screen and (min-width: $w-desktop) {
+    font-size: 16px;
+  }
+}
+.page-content{
+  p{
+    font-family: $f-roboto;
+    font-weight: $light;
+    font-style: italic;
+    font-size: 12px;
+    @media screen and (min-width: $w-desktop) {
+      font-size: 16px;
+    }
+  }
+  ul{
+    @include uldev();
+  }
+  li{
+    padding-left: 15px;
+    position: relative;
+    @media screen and (min-width: $w-desktop) {
+      padding-left: 20px;
+    }
+    &:before{
+      content:'';
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background-color: $c-green;
+      display: inline-block;
+      margin-right: 5px;
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      @media screen and (min-width: $w-desktop) {
+        width: 6px;
+        height: 6px;
+        top: 7px;
+        left: 7px;
+      }
+    }
+  }
+  .green{
+    color: $c-green;
+  }
+}

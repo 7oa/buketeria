@@ -1,0 +1,24 @@
+.page404{
+  text-align: center;
+  padding-bottom: 50px;
+  @media screen and (min-width: $w-desktop) {
+    padding-bottom: 100px;
+  }
+  &__img{
+    margin-bottom: 30px;
+  }
+  &__text{
+    font-family: $f-bebas;
+    font-size: 30px;
+    margin-bottom: 15px;
+  }
+  &__next{
+    font-size: 12px;
+    font-family: $f-roboto;
+    font-style: italic;
+    font-weight: $light;
+    @media screen and (min-width: $w-desktop) {
+      font-size: 14px;
+    }
+  }
+}

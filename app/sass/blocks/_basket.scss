@@ -1,0 +1,60 @@
+.basket{
+  &__list{
+    @media screen and (min-width: $w-desktop) {
+      display: flex;
+
+    }
+  }
+  &__item{
+    margin-bottom: 27px;
+    @media screen and (min-width: $w-desktop) {
+      margin-right: 20px;
+    }
+  }
+  &__cnt{
+    display: flex;
+    margin-bottom: 5px;
+  }
+  &__l{
+    flex: 0 0 auto;
+    margin-right: 15px;
+  }
+  &__r{
+    flex-grow: 1;
+  }
+  &__img{
+    display: block;
+    width: 93px;
+    height: 93px;
+    @include bg-img(cover);
+  }
+  &__ttl{
+    font-family: $f-bebas;
+    font-size: 20px;
+    text-transform: uppercase;
+  }
+  &__price{
+    font-size: 20px;
+    color: $c-green;
+    font-family: $f-bebas;
+    @media screen and (min-width: $w-tablet) {
+      font-size: 24px;
+    }
+  }
+}
+.del-link{
+  text-decoration: none;
+  font-family: $f-roboto;
+  font-weight: $light;
+  font-style: italic;
+  &:before{
+    content: '×';
+    display: inline-block;
+    margin-right: 5px;
+    color: $c-green;
+  }
+  span{
+    color: $white;
+    border-bottom: 1px solid $c-green;
+  }
+}

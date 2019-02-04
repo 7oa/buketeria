@@ -1,0 +1,45 @@
+extends core/_template
+
+append sharedVars
+	- var activeMenu = 'Букетерище #123';
+
+block title
+	title=activeMenu
+
+block content
+	.workarea
+		.container
+			.page
+				.page-ttl
+					.page-h
+						h1=activeMenu
+					.page-prev Белые розы, розовые розы, красные фиалки, герберы
+				.page-content
+					.catalog-detail
+						._l
+							._slider
+								.catalog-detail-slider
+									- for(var i=0;i<4;i++)
+										._item
+											._img(style="background-image:url('https://picsum.photos/500?image=11"+i+"')")
+						._r
+							._text.
+								Идеален для значимого события в Вашей жизни! Большой, красивый, интересный по цвету и цветам. В составе: эустома, орхидея Цимбидиум, диантус, роза Капучино, роза, скимия, эвкалипт Цинерия, протея, веточки Нобилиса
+
+							._btm
+								._pc
+									._price 61 000 <span class="rub">o</span>
+									._count
+										.quantity-selection
+											._minus.js-minus -
+											input._cur.js-count(type="text" value="2" disabled)
+											._plus.js-plus +
+								._btn
+									button._buy(type="button")
+
+
+
+
+
+
+	//end workarea

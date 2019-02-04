@@ -1,0 +1,224 @@
+.footer{
+  flex: 0 0 auto;
+  color: $white;
+  width: 100%;
+  background-color: $c-bg;
+  position: relative;
+  @media screen and (min-width: $w-desktop) {
+    border-top: 4px solid $c-green;
+  }
+  &:before{
+    @media screen and (min-width: $w-desktop) {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 50px;
+      background-image: url('images/big_branch2.svg');
+      @include bg-img(contain);
+      width: 150px;
+      height: 150px;
+      display: block;
+      transform: rotate(90deg) scale(-1, 1);
+      opacity: .15;
+    }
+  }
+  &__container{
+    position: relative;
+    &:before{
+      @media screen and (min-width: $w-desktop) {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 100px;
+        background-image: url('images/big_branch2.svg');
+        @include bg-img(contain);
+        width: 200px;
+        height: 200px;
+        display: block;
+        transform: rotate(90deg);
+        opacity: .15;
+      }
+    }
+  }
+  &__wrapper{
+    padding-top: 35px;
+    padding-bottom: 27px;
+    border-top: 1px solid $c-line;
+    @media screen and (min-width: $w-desktop) {
+      display: flex;
+      border-top: none;
+    }
+  }
+  &__logo{
+    display: none;
+    @media screen and (min-width: $w-desktop) {
+      display: block;
+      flex: 0 0 auto;
+      margin-right: 100px;
+    }
+  }
+  &__r{
+    text-align: center;
+    @media screen and (min-width: $w-desktop) {
+      flex-grow: 1;
+      text-align: left;
+      padding-top: 4px;
+    }
+  }
+  &__contacts{
+    margin-bottom: 26px;
+    @media screen and (min-width: $w-desktop) {
+      margin-right: 100px;
+    }
+  }
+  &__links{
+    margin-bottom: 22px;
+  }
+  &__developers{
+    margin-bottom: 9px;
+  }
+  &__year{
+  }
+  &__ss{
+    margin-bottom: 35px;
+    @media screen and (min-width: $w-desktop) {
+      display: none;
+    }
+  }
+  &__d-line{
+    @media screen and (min-width: $w-desktop) {
+      display: flex;
+    }
+  }
+  &__menu{
+    display: none;
+    @media screen and (min-width: $w-desktop) {
+      display: block;
+    }
+  }
+}
+.footer-contacts{
+  &__ttl{
+    display: none;
+    @media screen and (min-width: $w-desktop) {
+      display: block;
+      font-family: $f-bebas;
+      text-transform: uppercase;
+      font-size: 34px;
+      margin-bottom: 20px;
+    }
+  }
+  &__list{
+    display: flex;
+    justify-content: space-around;
+    @media screen and (min-width: $w-desktop) {
+      justify-content: space-between;
+      width: 500px;
+    }
+  }
+  &__items{
+    width: 48%;
+    @media screen and (min-width: $w-desktop) {
+      width: 200px;
+    }
+  }
+  &__city{
+    font-size: 16px;
+    margin-bottom: 9px;
+    font-family: $f-bebas;
+    text-transform: uppercase;
+    @media screen and (min-width: $w-desktop) {
+      font-size: 22px;
+    }
+  }
+  &__addr{
+    font-size: 12px;
+    font-family: $f-roboto;
+    font-weight: $light;
+    font-style: italic;
+    margin-bottom: 9px;
+    @media screen and (min-width: $w-desktop) {
+      font-size: 15px;
+    }
+  }
+  &__tel{
+    font-family: $f-bebas;
+    font-size: 16px;
+    @media screen and (min-width: $w-desktop) {
+      font-size: 20px;
+    }
+    span{
+      color: $c-green;
+    }
+    a{
+      color: $white;
+      text-decoration: none;
+    }
+  }
+}
+.footer-links{
+  &__item{
+    color: $white;
+    text-decoration: none;
+    font-family: $f-bebas;
+    text-transform: uppercase;
+    font-size: 16px;
+    @media screen and (min-width: $w-desktop) {
+      font-size: 22px;
+    }
+  }
+}
+.footer-developers{
+  font-family: $f-roboto;
+  font-weight: $light;
+  font-style: italic;
+  a{
+    color: $c-green;
+    text-decoration: none;
+  }
+}
+.footer-year{
+  font-family: $f-roboto;
+  font-weight: $light;
+  font-style: italic;
+}
+.footer-logo{
+  display: block;
+  background-image: url('images/logo.svg');
+  @include bg-img(contain);
+  width: 250px;
+  height: 70px;
+}
+.footer-nav{
+  &__ttl{
+    font-family: $f-bebas;
+    text-transform: uppercase;
+    font-size: 34px;
+    margin-bottom: 20px;
+  }
+  &__list{
+    @include uldev();
+  }
+  &__item{
+    display: block;
+  }
+  &__link{
+    color: $white;
+    text-decoration: none;
+    font-family: $f-bebas;
+    text-transform: uppercase;
+    font-size: 22px;
+  }
+
+}
+.footer-ss{
+  display: flex;
+  justify-content: center;
+  &__item{
+    display: block;
+    width: 30px;
+    height: 30px;
+    @include bg-img(contain);
+    margin: 0 7px;
+  }
+}

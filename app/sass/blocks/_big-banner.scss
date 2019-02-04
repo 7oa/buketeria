@@ -1,0 +1,32 @@
+.big-banner{
+  display: none;
+}
+@media screen and (min-width: $w-desktop) {
+  .big-banner{
+    height: 600px;
+    width: 100%;
+    display: block;
+    position: relative;
+    &__container{
+      padding-top: 100px;
+      position: relative;
+    }
+    &__img{
+      @include bg-img(cover);
+      mask-image: linear-gradient(transparent, $black 55%);
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    &__ttl{
+      color: $white;
+      font-family: $f-bebas;
+      text-transform: uppercase;
+      font-size: 28px;
+    }
+  }
+}

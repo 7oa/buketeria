@@ -1,0 +1,43 @@
+extends core/_template
+
+append sharedVars
+    - var activeMenu = 'Доставка';
+
+block title
+    title=activeMenu
+
+block content
+    .workarea
+        .container
+            .page
+                .page-ttl
+                    .page-h
+                        h1=activeMenu
+                .page-content
+                    p Время доставки по Архангельску и Северодвинску.
+                    p Сбор и доставка заказа занимают от 4,5 часов, с момента оформления и оплаты заказа.
+                    p Доставка осуществляется в выбранный вами интервал времени:
+                    ul
+                        li 10:00 - 12:00
+                        li 12:00 - 15:00
+                        li 15:00 - 18:00
+                        li 18:00 - 21:00
+                    p <span class="green">*</span> При оформлении заказа после 21:00, доставка возможна только на следующий день
+                    p Доставка на сегодня:
+                    ul
+                        li в выбранный интервал — <span class="green">500 рублей</span>
+                        li к точному времени — <span class="green">700 рублей</span>
+                    p Доставка на завтра и последующие дни:
+                    ul
+                        li в выбранный интервал — <span class="green">300 рублей</span>
+                        li к точному времени — <span class="green">700 рублей</span>
+                    p Необычная доставка.
+                    p Доставка в ночное время, доставка по разным адресам — <span class="green">звоните договоримся!</span>
+
+
+
+
+
+
+
+    //end workarea

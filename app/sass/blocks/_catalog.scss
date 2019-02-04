@@ -1,0 +1,80 @@
+.catalog{
+  overflow: hidden;
+  &__list{
+    @media screen and (min-width: $w-desktop) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+  &__item{
+    box-shadow: $shadow;
+    display: block;
+    width: 246px;
+    max-width: 100%;
+    @media screen and (min-width: $w-desktop) {
+      width: 346px;
+      margin: 0 60px 40px 0;
+    }
+    &:nth-child(3n){
+      @media screen and (min-width: $w-desktop) {
+        margin-right: 0;
+      }
+    }
+  }
+  &__w{
+    padding: 8px;
+  }
+  &__img{
+    display: block;
+    width: 230px;
+    height: 230px;
+    @include bg-img(cover);
+    @media screen and (min-width: $w-desktop) {
+      width: 330px;
+      height: 330px;
+    }
+  }
+  &__cnt{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px;
+  }
+  &__ttl{
+    font-size: 20px;
+    text-transform: uppercase;
+    color: $white;
+    font-family: $f-bebas;
+    text-decoration: none;
+    @media screen and (min-width: $w-desktop) {
+      font-size: 32px;
+    }
+  }
+  &__price{
+    font-size: 20px;
+    color: $c-green;
+    font-family: $f-bebas;
+    @media screen and (min-width: $w-desktop) {
+      font-size: 32px;
+    }
+  }
+  &__buy{
+    width: 30px;
+    height: 30px;
+    background-image: url('images/busket.svg');
+    @include bg-img(contain);
+  }
+  &__composition{
+    display: none;
+    @media screen and (min-width: $w-desktop) {
+      display: block;
+      color: $white;
+      font-family: $f-bebas;
+      font-size: 20px;
+      text-transform: uppercase;
+    }
+  }
+  &__r{
+    flex: 0 0 auto;
+  }
+}
