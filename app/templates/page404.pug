@@ -1,4 +1,4 @@
-extends core/_template
+extends core/_template2
 
 append sharedVars
 	- var activeMenu = 'Error 404';
@@ -9,10 +9,11 @@ block title
 block content
 	.workarea
 		.container
-			.page404
-				._img
-					img(src='images/small_branch-gray.svg')
-				._text кажется вы забыли поставить цветы в вазу
-				._next Не переживайте, мы вам <a href="#">поможем!</a>
+			.page
+				.simple-page
+					._img
+						img(src='images/small_branch-gray.svg')
+					._text кажется вы забыли поставить цветы в вазу
+					._next Не переживайте, мы вам <a href="#">поможем!</a>
 
 	//end workarea

@@ -1,0 +1,20 @@
+extends core/_template2
+
+append sharedVars
+    - var activeMenu = 'Оформление заказа';
+
+block title
+    title=activeMenu
+
+block content
+    .workarea
+        .container
+            .page
+                .simple-page
+                    ._img
+                        img(src='images/small_branch.svg')
+                    ._text Ваш заказ успешно оформлен
+                    ._next Выберем еще один <a href="#">букет?</a>
+
+
+    //end workarea

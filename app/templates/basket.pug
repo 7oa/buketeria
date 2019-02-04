@@ -1,4 +1,4 @@
-extends core/_template
+extends core/_template2
 
 append sharedVars
     - var activeMenu = 'Корзина';
@@ -14,27 +14,55 @@ block content
                     .page-h
                         h1=activeMenu
                 .page-content
-                    .basket
-                        ._list
-                            - for(var i=1;i<4;i++)
-                                ._item
-                                    ._cnt
-                                        ._l
-                                            a._img(href="detail.html" style="background-image:url('https://picsum.photos/500?image=11"+i+"')")
-                                        ._r
-                                            ._ttl Букетерище #12#{i}
-                                            ._price #{i}34 000 <span class="rub">o</span>
-                                            ._count
-                                                .quantity-selection
-                                                    ._minus.js-minus -
-                                                    input._cur.js-count(type="text" value="2" disabled)
-                                                    ._plus.js-plus +
-                                    ._del
-                                        a.del-link(href="#")
-                                            span Удалить
-                        ._bottom
-                            div Всего: 245 000 <span class="rub">o</span>
-
+                    .basket-wrapper
+                        .basket
+                            ._list
+                                - for(var i=1;i<5;i++)
+                                    ._item
+                                        ._cnt
+                                            ._l
+                                                a._img(href="detail.html" style="background-image:url('https://picsum.photos/500?image=11"+i+"')")
+                                            ._r
+                                                ._ttl Букетерище #12#{i}
+                                                ._price #{i}34 000 <span class="rub">o</span>
+                                                ._count
+                                                    .quantity-selection
+                                                        ._minus.js-minus -
+                                                        input._cur.js-count(type="text" value="2" disabled)
+                                                        ._plus.js-plus +
+                                        ._del
+                                            a.del-link(href="#")
+                                                span Удалить
+                            ._bottom
+                                ._sum
+                                    span._sum-label Всего:
+                                    |
+                                    |
+                                    span._sum-val 245 000
+                                    |
+                                    |
+                                    span.rub o
+                                ._checkout
+                                    a(href="order.html")
+                                        span Оформить заказ
+                        .delivery-terms
+                            ._bl
+                                ._ttl Условия доставки
+                                ._txt.
+                                    Стоимость:<br>
+                                    - по Архангельску:<br>
+                                    от 210 до 480 рублей<br>
+                                    - по Северодвинску:<br>
+                                    от 160 до 300 рублей<br>
+                                    <br>
+                                    Время:<br>
+                                    - к определенному времени,<br>
+                                    но не менее, чем за 2 часа.
+                            ._bl
+                                ._ttl Оплата
+                                ._txt.
+                                    Оплата онлайн картой на сайте
+                    //end .basket-wrapper
 
 
 

@@ -1,0 +1,25 @@
+.order{
+  &__form{
+      max-width: 800px;
+  }
+  &__itog{
+    text-align: right;
+    margin-bottom: 35px;
+  }
+  &__itog-line{
+    font-family: $f-bebas;
+    font-size: 20px;
+    @media screen and (min-width: $w-desktop) {
+      font-size: 28px;
+    }
+    span{
+      color: $c-green;
+    }
+  }
+  &__fields{
+    margin-bottom: 35px;
+  }
+  &__btn{
+    text-align: center;
+  }
+}

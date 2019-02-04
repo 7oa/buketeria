@@ -1,0 +1,12 @@
+.green-border{
+  border: 1px solid $c-green;
+  background-color: $c-bg;
+  color: $white;
+  font-size: 20px;
+  padding: 14px 28px;
+  box-sizing: border-box;
+  font-family: $f-bebas;
+  @media screen and (min-width: $w-desktop) {
+    font-size: 28px;
+  }
+}

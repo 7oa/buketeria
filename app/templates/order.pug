@@ -1,0 +1,87 @@
+extends core/_template2
+
+append sharedVars
+    - var activeMenu = 'Оформление заказа';
+
+block title
+    title=activeMenu
+
+block content
+    .workarea
+        .container
+            .page
+                .page-back
+                    a._link(href="#")
+                        span Назад
+                .page-ttl
+                    .page-h
+                        h1=activeMenu
+                .page-content
+                    .order
+                        form._form
+                            ._fields
+                                .input-row
+                                    .input-col2
+                                        label.input-label Как вас зовут?
+                                        input.input(type="text" )
+                                    .input-col2
+                                        label.input-label Ваш номер телефона<span>*</span>
+                                        input.input.phone(type="text" )
+                                .input-row
+                                    .input-col2
+                                        label.input-label Как зовут получателя?<span>*</span>
+                                        input.input(type="text" )
+                                    .input-col2
+                                        label.input-label Номер телефона получателя<span>*</span>
+                                        input.input.phone(type="text" )
+                                .input-row
+                                    .input-col2
+                                        label.input-label Город получателя<span>*</span>
+                                        select.select
+                                            option Архангельск
+                                            option Северодвинск
+                                    .input-col2
+                                        label.input-label Улица<span>*</span>
+                                        input.input.error(type="text" )
+                                .input-row
+                                    .input-col3
+                                        label.input-label Дом<span>*</span>
+                                        input.input(type="text" )
+                                    .input-col3
+                                        label.input-label Подъезд
+                                        input.input(type="text" )
+                                    .input-col3
+                                        label.input-label Квартира<span>*</span>
+                                        input.input(type="text" )
+                                .input-row
+                                    .input-col
+                                        .checkbox
+                                            label.checkbox
+                                                input.checkbox-input(type="checkbox" checked)
+                                                div.checkbox-label
+                                                    span Приложить записку?
+                                .input-row
+                                    .input-col
+                                        .label-flex
+                                            label.input-label Что напишем?
+                                            .textarea-counter <span class="val" id="charNum">0</span> / <span class="val">100</span>
+                                        textarea.textarea.mess(oninput="countChar(this)" data-max="100")
+                                .input-row
+                                    .input-col
+                                        label.checkbox.error
+                                            input.checkbox-input(type="checkbox")
+                                            div.checkbox-label
+                                                span Я принимаю <a href="#">Политику в области хранения и обработки персональных данных</a>
+                                .input-row
+                                    .input-col
+                                        .input-label Символом «<span>*</span>» выделены обязательные для заполнения поля.
+
+                            ._itog
+                                .order__itog-line Стоимость заказа: <span>500</span> <span class="rub">o</span>
+                                .order__itog-line Доставка: <span>500</span> <span class="rub">o</span>
+                                .order__itog-line Всего: <span>576 000</span> <span class="rub">o</span>
+
+                            ._btn
+                                input.green-border(type="submit" value="Оплатить заказ")
+
+    //end workarea

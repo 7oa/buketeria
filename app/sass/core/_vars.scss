@@ -6,6 +6,8 @@ $c-bg: #2B2A29;
 
 $c-green: #33CC82;
 
+$c-red: #CC335C;
+
 $c-line: rgba(51, 204, 130, 0.13);
 
 $shadow: 0 0 15px 0 rgba(33, 33, 33, 1);
@@ -25,6 +27,6 @@ $extra-bold: 800;
 $black-w: 900;
 
 //fonts
-$f-bebas: 'BebasNeue';
-$f-roboto: 'Roboto';
+$f-bebas: 'BebasNeue', sans-serif;
+$f-roboto: 'Roboto', sans-serif;
 $f-rub: 'ALSRubl';

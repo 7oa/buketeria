@@ -33,6 +33,8 @@ $(document).ready(function() {
         if(count==1) $(this).addClass('disabled');
     });
 
+    $(".phone").mask("+7 (999) 999-99-99");
+
     initCatalogSlider();
     initCatalogDetailSlider();
 
@@ -80,3 +82,12 @@ function initCatalogSlider(){
         });
     }
 }
+function countChar(val) {
+    var len = val.value.length;
+    var max = $(val).attr('data-max');
+    $('#charNum').text(len);
+    if (len >= max) {
+        val.value = val.value.substring(0, max);
+        $('#charNum').text(max);
+    }
+};
