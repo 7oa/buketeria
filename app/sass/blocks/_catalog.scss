@@ -37,7 +37,7 @@
   &__cnt{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     padding: 7px;
   }
   &__ttl{
@@ -63,6 +63,9 @@
     height: 30px;
     background-image: url('images/busket.svg');
     @include bg-img(contain);
+    &.inbasket{
+      background-image: url('images/busket-green.svg');
+    }
   }
   &__composition{
     display: none;
@@ -76,5 +79,6 @@
   }
   &__r{
     flex: 0 0 auto;
+    margin-top: 5px;
   }
 }

@@ -21,6 +21,16 @@ block content
 							input.js-range-slider(type="text" data-min="200" data-max="100000" data-from="30000" data-to="70000" data-step="100")
 					.catalog
 						._list.catalog-slider
+							._item
+								._w
+									a._img(href="detail.html" style="background-image:url('https://picsum.photos/500?image=120')")
+									._cnt
+										._l
+											a._ttl(href="detail.html") Букетерище #124
+											._composition Розы / Пионы / Хризантемы
+											._price 234 000 <span class="rub">o</span>
+										._r
+											button._buy.inbasket(type="button")
 							- for(var i=0;i<9;i++)
 								._item
 									._w
@@ -38,5 +48,14 @@ block content
 			._img(style="background-image:url('https://picsum.photos/2000/600?image=696')")
 			._container.container
 				._ttl Помогаем дарить<br>ваши чувства!
+
+	script.
+		$(document).ready(function () {
+			var slider = $(".js-range-slider");
+			slider.ionRangeSlider({
+			skin: "big",
+			type: "double"
+			});
+		});
 
 	//end workarea

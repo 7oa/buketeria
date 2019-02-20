@@ -53,6 +53,10 @@
   &.error{
     border-color: $c-red;
   }
+  &:disabled{
+    opacity: .9;
+    background-color: #474746;
+  }
 }
 .select{
   background-image: url('images/list_button.svg');
@@ -162,4 +166,10 @@
       color: $c-red;
     }
   }
+}
+.suggestions-suggestions{
+  background: $c-bg !important;
+  font-family: $f-bebas;
+  font-size: 20px;
+  color: $white;
 }

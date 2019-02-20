@@ -3,8 +3,10 @@
 }
 @media screen and (min-width: $w-desktop) {
   .big-banner{
-    height: 600px;
+    height: 800px;
     width: 100%;
+    max-width: 1900px;
+    margin: 0 auto;
     display: block;
     position: relative;
     &__container{
@@ -12,7 +14,9 @@
       position: relative;
     }
     &__img{
-      @include bg-img(cover);
+      background-size: cover;
+      background-position: center top;
+      background-repeat: no-repeat;
       mask-image: linear-gradient(transparent, $black 55%);
       position: absolute;
       top: 0;

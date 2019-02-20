@@ -15,22 +15,35 @@ $(document).ready(function() {
         $(this).toggleClass('open').next().slideToggle();
     });
 
-    $(".js-range-slider").ionRangeSlider({
-        skin: "big",
-        type: "double"
+    $('.js-count').each(function(){
+        if($(this).val()==1)
+            $(this).siblings('.js-minus').addClass("disabled");
     });
 
-    $('.js-plus').click(function(){
+
+    $(document).on('click','.js-plus',function(){
         var countEl = $(this).siblings('.js-count');
         var count = parseInt(countEl.val());
-        countEl.val(++count);
+        countEl.val(++count).trigger("change");
         if(count>1) $(this).siblings('.js-minus').removeClass('disabled');
     });
-    $('.js-minus').click(function(){
+
+    $(document).on('click','.js-minus',function(){
         var countEl = $(this).siblings('.js-count');
         var count = parseInt(countEl.val());
-        if(count>1) countEl.val(--count);
+        if(count>1) countEl.val(--count).trigger("change");
         if(count==1) $(this).addClass('disabled');
+    });
+
+    $(document).on("change",".js-add-mess",function(){
+        if($(this).prop("checked")) {
+            $(this).parent().next().val("Y");
+            $('.js-mess').slideDown();
+        }
+        else{
+            $(this).parent().next().val("N");
+            $('.js-mess').slideUp();
+        }
     });
 
     $(".phone").mask("+7 (999) 999-99-99");

@@ -86,3 +86,38 @@ button{
 .rub{
   font-family: $f-rub;
 }
+.simple-text{
+  font-size: 12px;
+  font-family: $f-roboto;
+  font-weight: $light;
+  font-style: italic;
+  @media screen and (min-width: $w-desktop) {
+    font-size: 16px;
+  }
+}
+.load{
+  position: relative;
+  &:after{
+    content: 'Загрузка';
+    position: absolute;
+    display: inline-block;
+    background-color: $white;
+    color: $c-green;
+    font-size: 16px;
+    font-family: $f-bebas;
+    top: 0;
+    right: 0;
+    padding: 5px 10px 5px 27px;
+
+    background-image: url('images/loader.gif');
+    background-repeat: no-repeat;
+    background-position: left 7px center;
+    background-size: 14px;
+    @media screen and (min-width: $w-desktop) {
+      font-size: 18px;
+      background-size: 16px;
+      padding: 5px 15px 5px 30px;
+      background-position: left 10px center;
+    }
+  }
+}
